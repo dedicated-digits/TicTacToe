@@ -7,7 +7,18 @@
     <title>TicTacToe</title>
 </head>
 <body>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="menu.css">
+    <div id="NameBlock" align="center">
+        <strong>TicTacToe</strong><br>
+        <i>Enter your name</i><br>
+        <input type="text" id="name" placeholder="Name"></input><br>
+        <input type="number" id="number" value="3" align="center"></input><br>
+        <button id="enterbtn" onclick="onSubmit()">Enter Game</button>
+    </div>
     <div id="Game">
+        <button onclick="ToMenu()">Back to menu</button>
+        <button onclick="NewGame()">New Game</button>
     </div>
 </body>
 </html>
