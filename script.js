@@ -2,28 +2,31 @@ var rows=0;
 var buttongrid
 function blocks(num){
     alert("hello");
-    var tempbtn;
-    const Gameblock = document.getElementById("Game");
+    const Gameblock = document.getElementById("GameGrid");
     for (let index = 0; index < num; index++) {
-        tempbtn=document.createElement("button");
+        let tempbtn=document.createElement("button");
         tempbtn.innerHTML = " ";
         Gameblock.appendChild(tempbtn);
         
     }
 }
-function GameGrid(num){
-    
+function GameDispay(num){
+    const GameGrid = document.getElementById("GameGrid");
     for (let i = 0; i < num*num; i++) {
-        
+        let tempbtn=document.create("button");
+        tempbtn.innerHTML = " ";
+        GameGrid.appendChild(tempbtn);
     }
 }
+function menuchange(enable,disable){
+    document.getElementById(enable).style.display="grid";
+    document.getElementById(disable).style.display="none";
+}
 function onSubmit(){
-    document.getElementById("Game").style.display="block";
-    document.getElementById("NameBlock").style.display="none";
+    menuchange("Game","NameBlock");
     const num = parseInt(document.getElementById("number").value);
-    GameGrid(num);
+    GameDispay(parseInt(num));
 }
 function ToMenu(){
-    document.getElementById("NameBlock").style.display="block";
-    document.getElementById("Game").style.display = "None";
+    menuchange("NameBlock","Game");
 }
